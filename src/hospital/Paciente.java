@@ -9,7 +9,7 @@ package hospital;
  * @author arthur
  * 
  * Classe relacionada ao Paciente, aqui guardaremos todas suas informações, e também, seu prontuário e informações adicionais,
- * essas, tem suas classes em específico
+ * essas, tem suas classes em específico 
  */
 public class Paciente {
     private String nome;
@@ -95,10 +95,11 @@ public class Paciente {
         return adicionais;
     }
 
-    protected void setAdicionais(InfoAdicionais adicionais) {
-        this.adicionais = adicionais;
+    protected void setAdicionais() {
+        InfoAdicionais info;
+        info = new InfoAdicionais();
+        this.adicionais = info;
     }
-    
     
     
 }

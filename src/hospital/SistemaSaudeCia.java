@@ -41,12 +41,17 @@ public class SistemaSaudeCia {
         Scanner scan = new Scanner(System.in);
         
         Paciente pac = new Paciente();
+        Medico med = new Medico();
         
         System.out.println("paciente nome: " + pac.getNome());
         System.out.println("Qual o nome do paciente?");
         String nome = scan.nextLine();
         pac.setNome(nome);
         System.out.println("paciente nome: " + pac.getNome());
+        pac.setAdicionais();
+        //System.out.println("paciente alergias: " + pac.getAdicionais().getAlergias());
+        med.gerenciaDadosAdicionais(pac);
+        System.out.println("paciente alergias: " + pac.getAdicionais().getAlergias());
         
     }
     
