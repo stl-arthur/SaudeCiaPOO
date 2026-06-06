@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package hospital;
+import 
 import java.util.Scanner;
 /**
  *
@@ -37,17 +38,6 @@ import java.util.Scanner;
  */
 public class SistemaSaudeCia {
         
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        
-        Paciente pac = new Paciente();
-        
-        System.out.println("paciente nome: " + pac.getNome());
-        System.out.println("Qual o nome do paciente?");
-        String nome = scan.nextLine();
-        pac.setNome(nome);
-        System.out.println("paciente nome: " + pac.getNome());
-        
-    }
+    
     
 }
