@@ -14,24 +14,25 @@ public class Paciente {
     private String identificacao;
     private String dtNascimento;
     private String endereco;
-    private String infoContato;
-    private String tipoConvenio;
+    private String contato;
+    private int tipoConvenio;
     private Prontuario prontuario;
     private InfoAdicionais adicionais;
 
     public Paciente() {
     }
 
-    public Paciente(String nome, String identificacao, String dtNascimento, String endereco, String infoContato, String tipoConvenio, Prontuario prontuario, InfoAdicionais adicionais) {
+    public Paciente(String nome, String identificacao, String dtNascimento, String endereco, String contato, int tipoConvenio, Prontuario prontuario, InfoAdicionais adicionais) {
         this.nome = nome;
         this.identificacao = identificacao;
         this.dtNascimento = dtNascimento;
         this.endereco = endereco;
-        this.infoContato = infoContato;
+        this.contato = contato;
         this.tipoConvenio = tipoConvenio;
         this.prontuario = prontuario;
         this.adicionais = adicionais;
     }
+    /*Deixar claro na implementação para o usuário digitar o numero referente ao tipo de convenio dele*/
 
     public String getNome() {
         return nome;
@@ -65,19 +66,16 @@ public class Paciente {
         this.endereco = endereco;
     }
 
-    public String getInfoContato() {
-        return infoContato;
-    }
-
-    public void setInfoContato(String infoContato) {
-        this.infoContato = infoContato;
-    }
 
     public String getTipoConvenio() {
-        return tipoConvenio;
+        if (tipoConvenio == 1) {
+            return "Particular";
+        } else {
+            return "Plano de Saúde";
+    }
     }
 
-    public void setTipoConvenio(String tipoConvenio) {
+    public void setTipoConvenio(int tipoConvenio) {
         this.tipoConvenio = tipoConvenio;
     }
 
@@ -89,6 +87,7 @@ public class Paciente {
         this.prontuario = prontuario;
     }
 
+  
     public InfoAdicionais getAdicionais() {
         return adicionais;
     }
@@ -97,6 +96,20 @@ public class Paciente {
         this.adicionais = adicionais;
     }
 
-     
+    public String getContato() {
+        for (int i = 0; i < contato.length(); i++) { /*percorre a string contato, se tiver um simbolo @ é dado como email e retorna o email, se não encontrar retorna como telefone*/
+            if (contato.charAt(i) == '@') {
+                return "E-mail: " + contato;
+            }
+        }
+        return "Telefone: " + contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
+
+      
     
 }
+
