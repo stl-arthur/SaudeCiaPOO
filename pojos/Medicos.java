@@ -8,16 +8,14 @@ public class Medicos {
     private String nome;
     private String crm;
     private String especialidade;
-    private String infoContato;
     
     public Medicos(){
     }
     
-    public Medicos(String nome, String crm, String especialidade, String infoContato){
+    public Medicos(String nome, String crm, String especialidade){
         this.nome = nome;
         this.crm = crm;
         this.especialidade = especialidade;
-        this.infoContato = infoContato;
     }
 
     public String getNome() {
@@ -44,14 +42,6 @@ public class Medicos {
         this.especialidade = especialidade;
     }
 
-    public String getInfoContato() {
-        
-        return infoContato;
-    }
-
-    public void setInfoContato(String infoContato) {
-        this.infoContato = infoContato;
-    }
     
     
     
