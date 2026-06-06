@@ -11,41 +11,78 @@ package pojos;
 public class InfoAdicionais {
     private Paciente paciente;
     private boolean fuma,bebe,colesterol,doencaCardiaca;
-    private String cirurgias;
-    private String alergias;
+    private String cirurgia;
+    private String alergia;
     
     
     public InfoAdicionais(){
     }
 
-    public InfoAdicionais(Paciente paciente, String condSaude, String alergias) {
+    public InfoAdicionais(Paciente paciente, boolean fuma,boolean bebe,boolean colesterol, boolean doencaCardiaca ,String cirurgia, String alergia) {
         this.paciente = paciente;
-        this.habitos = habitos;
-        this.condSaude = condSaude;
-        this.alergias = alergias;
+        this.fuma = fuma;
+        this.bebe = bebe;
+        this.colesterol = colesterol;
+        this.doencaCardiaca = doencaCardiaca;
+        this.cirurgia = cirurgia;
+        this.alergia = alergia;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public boolean isFuma() {
+        return fuma;
+    }
+
+    public void setFuma(boolean fuma) {
+        this.fuma = fuma;
+    }
+
+    public boolean isBebe() {
+        return bebe;
+    }
+
+    public void setBebe(boolean bebe) {
+        this.bebe = bebe;
+    }
+
+    public boolean isColesterol() {
+        return colesterol;
+    }
+
+    public void setColesterol(boolean colesterol) {
+        this.colesterol = colesterol;
+    }
+
+    public boolean isDoencaCardiaca() {
+        return doencaCardiaca;
+    }
+
+    public void setDoencaCardiaca(boolean doencaCardiaca) {
+        this.doencaCardiaca = doencaCardiaca;
+    }
+
+    public String getCirurgia() {
+        return cirurgia;
+    }
+
+    public void setCirurgia(String cirurgia) {
+        this.cirurgia = cirurgia;
+    }
+
+    public String getAlergia() {
+        return alergia;
+    }
+
+    public void setAlergia(String alergia) {
+        this.alergia = alergia;
     }
     
-    public void setHabitos(String habitos){
-        this.habitos = habitos;
-    }
-    
-    public String getHabitos(){
-        return habitos;
-    }
-    
-    public void setCondSaude(String condSaude){
-        this.condSaude = condSaude;
-    }
-    
-    public String getCondSaude(){
-        return condSaude;
-    }
-    
-    public void setAlergias(String alergias){
-        this.alergias = alergias;
-    }
-    
-    public String getAlergias(){
-        return alergias;
-    }
 }
+  
