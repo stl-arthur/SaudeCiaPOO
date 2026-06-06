@@ -13,8 +13,7 @@ public class Consulta {
     private Paciente paciente;
     private String tipoConsulta;
     
-    public Consulta(String data, String horario,
-                    Medicos medico, Paciente paciente, String tipoConsulta) {
+    public Consulta(String data, String horario, Medicos medico, Paciente paciente, String tipoConsulta) {
         this.data = data;
         this.horario = horario;
         this.medico = medico;
@@ -57,13 +56,13 @@ public class Consulta {
         this.paciente = paciente;
     }
 
-    public String getTipoConsulta() {
-        return tipoConsulta;
+    public String getTipoConsulta() { /*NÃO SEI COMO FAZER A VERIFICAÇÃO NESSE CASO*/
+       return tipoConsulta;
     }
 
     public void setTipoConsulta(String tipoConsulta) {
         this.tipoConsulta = tipoConsulta;
     }
     
-    
 }
+
