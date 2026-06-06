@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package hospital;
+package pojos;
+
 
 /**
- *
- * @author arthur
- * 
+
  * Classe de prontuario, separada de Paciente para melhor controle de acesso para o médico e para que 
  * a classe Paciente fique mais limpa
  */
 public class Prontuario {
+    private Paciente paciente;
     private String sintomas;
     private String diagnostico;
     private String prescricao;
@@ -21,7 +21,8 @@ public class Prontuario {
     }
 
     
-    public Prontuario(String sintomas, String diagnostico, String prescricao) {
+    public Prontuario(Paciente paciente, String sintomas, String diagnostico, String prescricao) {
+        this.paciente = paciente;
         this.sintomas = sintomas;
         this.diagnostico = diagnostico;
         this.prescricao = prescricao;
@@ -50,6 +51,14 @@ public class Prontuario {
 
     public void setPrescricao(String prescricao) {
         this.prescricao = prescricao;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
     
     
