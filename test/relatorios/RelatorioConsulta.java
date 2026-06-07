@@ -61,9 +61,6 @@ public class RelatorioConsulta {
      * @return true se as datas forem iguais, false caso contrário
      */
     private boolean datasIguais(String data1, String data2) {
-        if (data1.length() != data2.length()) {
-            return false;
-        }
         for (int i = 0; i < data1.length(); i++) {
             if (data1.charAt(i) != data2.charAt(i)) {
                 return false;
