@@ -6,7 +6,6 @@ package gerenciamento;
 import pojos.Prontuario;
 import pojos.Paciente;
 import java.util.Scanner;
-
 /**
  *Classe responsável pela modificação de prontuários de pacientes, só é acessada pelo médico, pode cadastrar, alterar e excluir 
  * o prontuário relacionado a um paciente
@@ -17,9 +16,9 @@ public class GerenciaProntuario {
     
     /**
      * Cria um prontuario para o paciente especificado
-     * @param paciente - cadastra um novo prontuario para o paciente especificado
+     * @param paciente - Paciente a ter um prontuario cadastrado
     */
-    public void CadastraProntuario(Paciente paciente){
+    public void CadastraProntuarioPaciente(Paciente paciente){
         Prontuario pront = new Prontuario();
         
         System.out.println("Síntomas apresentados pelo paciente:");

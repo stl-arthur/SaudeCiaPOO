@@ -4,7 +4,11 @@
  */
 package gerenciamento;
 import pojos.Paciente;
+import pojos.Consulta;
+import pojos.Medicos;
+import pojos.Prontuario;
 import java.util.Scanner;
+import relatorios.GerarRelatorioMedico;
 /**
  *
  * @author arthur
@@ -13,6 +17,8 @@ public class Principal {
     public static void main(String[] args){
         Paciente pac = new Paciente();
         Scanner scan = new Scanner(System.in);
+        pac.setNome("teste");
+        
         
         GerenciaDadosAdicionais gen = new GerenciaDadosAdicionais();
         int repete = 1;
@@ -38,7 +44,7 @@ public class Principal {
                     pac.getAdicionais().isBebe() + "\n" +
                     pac.getAdicionais().isFuma());
                 default:
-                    System.out.println("wrong answer");
+                    System.out.println("Opção não listada!");
             }
             
             System.out.println("Continuar? (1 ou 0)");

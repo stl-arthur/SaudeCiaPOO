@@ -9,6 +9,7 @@ package pojos;
 
  * Classe de prontuario, separada de Paciente para melhor controle de acesso para o médico e para que 
  * a classe Paciente fique mais limpa
+ * @author Giovana B
  */
 public class Prontuario {
     private Paciente paciente;
