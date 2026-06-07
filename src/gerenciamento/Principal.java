@@ -8,6 +8,10 @@ import pojos.Consulta;
 import pojos.Medicos;
 import java.util.ArrayList;
 import java.util.Scanner;
+import mensagens.EnviarEmail;
+import mensagens.EnviarMensagens;
+import mensagens.EnviarSMS;
+import relatorios.GerarRelatorioConsulta;
 import relatorios.GerarRelatorioMedico;
 /**
  *Classe principal, controla o acesso por perfil (secretaria ou mdico) e chama as classes de gerenciamento de acordo com a opçao do usuario.
@@ -58,7 +62,7 @@ public class Principal {
     }
   
     /**
-     * Exibe o menu da secretaria e controla as opcoes disponiveis.
+     * mostra o menu da secretaria e controla as opcoes disponiveis.
      */
     static void menuSecretaria(Scanner leitura, ArrayList<Paciente> lstPacientes,
                                ArrayList<Consulta> lstConsultas, Medicos medico,
